@@ -23,26 +23,33 @@ console.log(tableData);
 displayData(tableData);
 
 // Select the button
-var button = d3.select("#filter-btn");
+var button = d3.selectAll(".filter");
 
-
+filterObject = {}
 
 // // Complete the event handler function for the form
 function runEnter() {
-
+    let newData = tableData;
     // Prevent the page from refreshing
     d3.event.preventDefault();
     
-    var inputDate = d3.select("#datetime");
+    var inputDate = d3.select(this).select("input");
     // Get the value property of the input element
     var inputValue = inputDate.property("value");
-    
-    var filteredData = tableData.filter(row => row.datetime === inputValue);
+    var inputID = inputDate.attr("id");
+    console.log(inputValue);
+    console.log(inputID);
+    filterObject[inputID]=inputValue;
+    console.log(filterObject);
+
+    Object.entries(filterObject).forEach(([key, value]) => {
+        newData = newData.filter(row => row[key] === value);
+    });
   
-    console.log(filteredData);
-    displayData(filteredData);
+//     console.log(filteredData);
+    displayData(newData);
 
 };
 
-// // Create event handlers for clicking the button or pressing the enter key
-button.on("click", runEnter);
+// // // Create event handlers for clicking the button or pressing the enter key
+button.on("change", runEnter);
