@@ -25,31 +25,39 @@ displayData(tableData);
 // Select the button
 var button = d3.selectAll(".filter");
 
+// create empty array
 filterObject = {}
 
-// // Complete the event handler function for the form
+// // Create a function to look at value entered and display filtered data
+
 function runEnter() {
     let newData = tableData;
+
     // Prevent the page from refreshing
     d3.event.preventDefault();
     
+    // Select where data is inputed
     var inputDate = d3.select(this).select("input");
+
     // Get the value property of the input element
     var inputValue = inputDate.property("value");
+
+    // look at which attribute needs to be filtered
     var inputID = inputDate.attr("id");
     console.log(inputValue);
     console.log(inputID);
+
+    // Attach the attribute and value
     filterObject[inputID]=inputValue;
     console.log(filterObject);
 
+    // Filter the data based on the value inputed
     Object.entries(filterObject).forEach(([key, value]) => {
         newData = newData.filter(row => row[key] === value);
     });
   
-//     console.log(filteredData);
     displayData(newData);
-
 };
 
-// // // Create event handlers for clicking the button or pressing the enter key
+// Create event handlers for pressing the enter key
 button.on("change", runEnter);

@@ -27,16 +27,19 @@ var button = d3.select("#filter-btn");
 
 
 
-// // Complete the event handler function for the form
+// Create a function to look at value entered and display filtered data
 function runEnter() {
 
     // Prevent the page from refreshing
     d3.event.preventDefault();
     
+    // Select where data is inputed
     var inputDate = d3.select("#datetime");
+
     // Get the value property of the input element
     var inputValue = inputDate.property("value");
     
+    // Filter the data based on the value inputed
     var filteredData = tableData.filter(row => row.datetime === inputValue);
   
     console.log(filteredData);
@@ -44,5 +47,5 @@ function runEnter() {
 
 };
 
-// // Create event handlers for clicking the button or pressing the enter key
-button.on("click", runEnter);
+// Create event handlers for pressing the enter key
+button.on("change", runEnter);
