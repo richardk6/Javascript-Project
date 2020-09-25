@@ -4,41 +4,23 @@
 
 WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `ALIENS-R-REAL` have collected all of the eye-witness reports we could to prove it! All we need to do now is put this information online for the world to see and then the matter will finally be put to rest.
 
-There is just one tiny problem though... our collection is too large to search through manually. Even our most dedicated followers are complaining that they are having trouble locating specific reports in this mess.
+There is just one tiny problem though... the collection is too large to search through manually. Even the most dedicated followers are complaining that they are having trouble locating specific reports in this mess.
 
-That's why we are hiring you. We need you to write code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js). We also need to allow our users to filter the table data for specific values. There's a catch though... we only use pure JavaScript, HTML, and CSS, and D3.js on our web pages. They are the only coding languages which can be trusted.
+I was hired to write code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js), only using pure JavaScript, HTML, and CSS, and D3.js on the web pages. They are the only coding languages which can be trusted with such important data.
 
-You can handle this... right? The planet Earth needs to know what we have found!
-
-## Your Task
-
-### Before You Begin
-
-1. Create a new repository for this project called `javascript-challenge`. **Do not add this homework to an existing repository**.
-
-1. Clone the new repository to your computer.
-
-1. Add your **html** files to this folder and also create a `static` folder that will contain your javascript. 
-
-1. Push the above changes to GitHub or GitLab.
-
-1. Ensure your repository has regular commits (e.g., 20+ commits) and a thorough README.md file
+## Tasks Completed
 
 ### Level 1: Automatic Table and Date Search (Required)
 
-* Create a basic HTML web page or use the [index.html](StarterCode/index.html) file provided (we recommend building your own custom page!).
+* I used the [index.html] to display a UFO dataset in a table with columns for `date/time`, `city`, `state`, `country`, `shape`, and `comment`.
 
-* Using the UFO dataset provided in the form of an array of JavaScript objects, write code that appends a table to your web page and then adds new rows of data for each UFO sighting.
-
-  * Make sure you have a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
-
-* Use a date form in your HTML document and write JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input.
+* I wrote Javascript code in [app.js] that listensfor events and search through the `date/time` column to find rows that match user input.
 
 ### Level 2: Multiple Search Categories (Optional)
 
-* Complete all of Level 1 criteria.
+* Next, I decided to add additional search categories. I used [index_bonus.html] to display the UFO dataset just like above, but included additional attributes (city, state, and shape) to search under. I did not include country because all data is from the USA.
 
-* Using multiple `input` tags and/or select dropdowns, write JavaScript code so the user can set multiple filters and search for UFO sightings using the following criteria (which are based on the table columns used):
+* I wrote avaScript code in [app_bonus.js] so the user can set multiple filters and search for UFO sightings using the following criteria (which are based on the table columns used):
 
   1. `date/time`
   2. `city`
@@ -51,10 +33,6 @@ You can handle this... right? The planet Earth needs to know what we have found!
 ### Dataset
 
 * [UFO Sightings Data](StarterCode/static/js/data.js)
-
-- - -
-
-**Good luck!**
 
 - - -
 
