@@ -6,7 +6,7 @@ WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `
 
 There is just one tiny problem though... the collection is too large to search through manually. Even the most dedicated followers are complaining that they are having trouble locating specific reports in this mess.
 
-I was hired to write code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js), only using pure JavaScript, HTML, and CSS, and D3.js on the web pages. They are the only coding languages which can be trusted with such important data.
+I wrote code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js), only using pure JavaScript, HTML, and CSS, and D3.js on the web pages. They are the only coding languages which can be trusted with such important data.
 
 ## Tasks Completed
 
